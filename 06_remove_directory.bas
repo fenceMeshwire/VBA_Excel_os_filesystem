@@ -4,7 +4,7 @@ Sub remove_directory()
 
 Dim strPath As String
 
-strPath = "C:\Users\...\remove_directory"
+strPath = "C:\Users\username\directory"
 
 On Error GoTo file_error
 
@@ -15,6 +15,7 @@ ElseIf Dir(strPath, vbDirectory) = "" Then
 End If
 
 file_error:
-  MsgBox ("Remove directory not possible. Directory contains file(s).")
+  MsgBox ("Remove directory not possible. " & _
+    "Directory contains further directories or files.")
   
 End Sub
