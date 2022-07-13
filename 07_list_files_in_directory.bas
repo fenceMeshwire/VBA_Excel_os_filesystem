@@ -10,7 +10,7 @@ strPath = "C:\Users\user\directory\"
 strFile = Dir(strPath)
 
 While strFile <> ""
-  Debug.Print strFile
+  Debug.Print strFile, FileDateTime(strPath & strFile)
   strFile = Dir
 Wend
 
